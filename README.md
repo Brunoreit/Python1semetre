@@ -1,1 +1,1 @@
-Repositório dedicado à exercícios e praticas em python
+Repositório dedicado a exercícios e praticas em python
