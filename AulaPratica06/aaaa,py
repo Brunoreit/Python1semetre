@@ -1,0 +1,33 @@
+# Inicializa as variáveis com valores que garantem que qualquer idade digitada será menor que idadejovem
+idadejovem = float('inf')
+nomesjovens = ''
+# Inicializa as variáveis com valores que garantem que qualquer idade digitada será maior que idadevelha
+idadevelha = float('-inf')
+nomevelha = ''
+
+while True:
+
+    nome = input("Digite seu primeiro nome: ")
+    idade = int(input("Digite sua idade: "))
+
+    if idade < 0:
+        print("Idade não pode ser negativa. PROGRAMA ENCERRADO")
+        break
+
+    if idade < idadejovem:
+        # Se a nova idade for menor que a idade mais jovem registrada até agora,
+        # atualizamos o nome e a idade da pessoa mais jovem e reiniciamos a string de nomes
+        idadejovem = idade
+        nomesjovens = nome
+    elif idade == idadejovem:
+        # Se houver empate na idade mais jovem, adicionamos a pessoa atual à string de nomes
+        nomesjovens += f", {nome}"
+
+    if idade > idadevelha:
+        # Se a nova idade for maior que a idade mais velha registrada até agora,
+        # atualizamos o nome e a idade da pessoa mais velha
+        idadevelha = idade
+        nomevelha = nome
+
+print(f"O(s) nome(s) e a idade da(s) pessoa(s) mais jovem(ns) é(são): {nomesjovens} que(s) possui(em) {idadejovem} anos")
+print(f"O nome e a idade da pessoa mais velha é: {nomevelha} {idadevelha}")
